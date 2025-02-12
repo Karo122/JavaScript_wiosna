@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+            function AB_rze() {
+             let aX_rze = parseFloat(document.getElementById('aX').value);
+             let aY_rze = parseFloat(document.getElementById('aY').value);
+             let bX_rze = parseFloat(document.getElementById('bX').value);
+             let bY_rze = parseFloat(document.getElementById('bY').value);
+              document.getElementById("odpowiedz").innerHTML = "AB= "
+                + (Math.sqrt((aX_rze - bX_rze) ** 2 + (aY_rze - bY_rze) ** 2)).toFixed(2);
+            }
+        
+          function BC_rze() {
+             let bX_rze = parseFloat(document.getElementById('bX').value);
+             let bY_rze = parseFloat(document.getElementById('bY').value);
+             let cX_rze = parseFloat(document.getElementById('cX').value);
+             let cY_rze = parseFloat(document.getElementById('cY').value);
+              document.getElementById("odpowiedz").innerHTML = "BC= "
+                + (Math.sqrt((bX_rze - cX_rze) ** 2 + (cY_rze - cY_rze) ** 2)).toFixed(2);
+            }
+        
+        function AC_rze() {
+             let aX_rze = parseFloat(document.getElementById('bX').value);
+             let aY_rze = parseFloat(document.getElementById('bY').value);
+             let cX_rze = parseFloat(document.getElementById('cX').value);
+             let cY_rze = parseFloat(document.getElementById('cY').value);
+              document.getElementById("odpowiedz").innerHTML = "AC= "
+                + (Math.sqrt((aX_rze - cX_rze) ** 2 + (aY_rze - cY_rze) ** 2)).toFixed(2);
+            }
+        </script>
+        <h1>ZADANIE 20 RZESZEWICZ</h1><br><br>
+          Podaj X punktu A: <input type="text" id="aX"><br>
+          Podaj Y punktu A: <input type="text" id="aY"><br>
+          Podaj X punktu B: <input type="text" id="bX"><br>
+          Podaj Y punktu B: <input type="text" id="bY"><br>
+          Podaj X punktu C: <input type="text" id="cX"><br>
+          Podaj Y punktu C: <input type="text" id="cY"><br>
+        <input type="button" value="Oblicz AB" Onclick="AB_rze()"><br><br>
+        <input type="button" value="Oblicz BC" Onclick="BC_rze()"><br><br>
+        <input type="button" value="Oblicz AC" Onclick="AC_rze()"><br><br>
+        <div id="odpowiedz"></div>
+    </body>
+</html>
