@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sprawdzenie danych Rzeszewicz</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div style="color:red;font-size:50px;">
+            <script language="JavaScript">
+                do{
+                    var liczba1=prompt("Bok A =","");
+                    var a_rze=parseFloat(liczba1);
+                }
+                while(a_rze > 0);
+                do {
+                    var liczba1=prompt("Bok B =","");
+                    var b_rze=parseFloat(liczba1);
+                }
+                while(b_rze > 0);
+                do{
+                    var liczba1=prompt("Bok C =","");
+                    var c_rze=parseFloat(liczba1);
+                }
+                while(c_rze > 0);
+                do{
+                    document.write("Podane boki tworzą trójkąt!");
+                }
+                while((a_rze + b_rze > c_rze) && (b_rze + c_rze > a_rze) && (a_rze + c_rze > b_rze));
+            </script>
+        </div>
+    </body>
+</html>
