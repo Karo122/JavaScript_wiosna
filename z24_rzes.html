@@ -1,0 +1,30 @@
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: silver;
+            color: blue;
+            height: 98%;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var x1_rze = parseFloat(prompt("Podaj x1 w stopniach:"));
+        var x2_rze = parseFloat(prompt("Podaj x2 w stopniach:"));
+
+        document.write("x1=" + x1_rze + "&emsp;&emsp; x2=" + x2_rze + "<br>");
+        document.write("x1=" + x1_rze + "&emsp;&emsp; x1=" + (x1_rze * Math.PI / 180).toFixed(2));
+
+        var y1 = (3 * x1_rze / (6/ 6 + 2)).toFixed(2);
+        var y2 = (2 * Math.cos(x1_rze * Math.PI / 180) + 3 * Math.sin(x1_rze * Math.PI / 180)).toFixed(2);
+        var y3 = (Math.cbrt(Math.pow(x1_rze, 5) + 2 * Math.pow(x2_rze, 4)) * Math.abs(x1_rze - x2_rze)).toFixed(2);
+
+        document.write("<br>");
+        document.write("y1=" + y1 + "<br>");
+        document.write("y2=" + y2 + "<br>");
+        document.write("y3=" + y3 + "<br>");
+    </script>
+</body>
+</html>
