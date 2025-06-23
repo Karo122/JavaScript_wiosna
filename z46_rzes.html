@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sprawdzenie danych Rzeszewicz</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div style="color:red;font-size:50px;">
+            <script language="JavaScript">
+                do {
+                    var liczba1=prompt("wysokość=","");
+                    var h_rze=parseFloat(liczba1);
+                }
+                while ( h_rze<=0);
+                do {
+                    var liczba1=prompt("podstawę=","");
+                    var a_rze=parseFloat(liczba1);
+                }
+                while(!( a_rze>0));
+                var Pole=a_rze*h_rze/2;
+                document.write("Pole = "+Pole.toFixed(2)+" cm^2"+"<br>");
+            </script>
+        </div>
+    </body>
+</html>
