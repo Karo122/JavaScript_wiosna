@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1>KOD DO ZADANIA 53</h1>
+		<textarea style="width: 98%; height: 300px;">
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Użycie pętli for do rysowania w trybie tekstowym</title>
+    </head>
+    <body>
+        <script>
+            var a_rze = parseFloat(prompt("Podaj liczbę liter imienia:",""));
+            var a_rze_przeliczone = a_rze % 4 + 5;
+            var b_rze = parseFloat(prompt("Podaj liczbę liter nazwiska:",""));
+            var b_rze_przeliczone = b_rze % 6 + 20;
+            // Górna linia
+            for(i_rze=0;i_rze<b_rze_przeliczone;i_rze++){
+                document.write("*");
+            }
+            document.write("<br>");
+            // Boki
+            for(i_rze=0;i_rze<a_rze_przeliczone-2;i_rze++){
+                document.write("*");
+                for(k_rze=0;k_rze<b_rze_przeliczone-2;k_rze++){
+                    document.write("&ensp;");
+                }
+                document.write("*");
+                document.write("<br>");
+            }
+            // Dolna linia
+            for(i_rze=0;i_rze<b_rze_przeliczone;i_rze++){
+                document.write("*");
+            }
+            document.write("<br>");
+        </script>
+    </body>
+</html>
+        </textarea>
+    </body>
+</html>	
