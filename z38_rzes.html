@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Zadanie 38</title>
+    </head>
+    <body style="background-color: silver">
+        <div style="font-size: 20pt;">
+            <script>
+                function sprawdz_rze(){
+                    var opcja_rze = prompt("Podaj opcję: ", "");
+                    alert("Wybrano opcję: " + opcja_rze);
+                }
+                var imie_rze = prompt("Wpisz swoje imię: ", "");
+                var nazwisko_rze = prompt("Wpisz swoje nazwisko: ", "");
+                var rok_rze = parseInt(prompt("Wpisz rok urodzenia: ", ""));
+                var miesiac_rze = parseInt(prompt("Wpisz miesiąc urodzenia: ", ""));
+                var dzien_rze = parseInt(prompt("Wpisz dzień urodzenia: ", ""));
+                var imie2_rze = imie_rze.length;
+                var nazwisko2_rze = nazwisko_rze.length;
+                var liczba1_rze = imie2_rze;
+                var liczba2_rze = imie2_rze + 7;
+                var liczba3_rze = nazwisko2_rze;
+                var liczba4_rze = nazwisko2_rze + 4;
+                document.write("<font color=green>Moje nazwisko to: " + imie_rze + " " + nazwisko_rze + "</font><br>");
+                document.write("<font color=green>Liczba1: " + liczba1_rze + "</font><br>");
+                document.write("<font color=green>Liczba2: " + liczba2_rze + "</font><br>");
+                document.write("<font color=green>Liczba3: " + liczba3_rze + "</font><br>");
+                document.write("<font color=green>Liczba4: " + liczba4_rze + "</font><br>");
+                document.write("<font color=red>----------------MENU----------------</font><br>");
+                document.write("<font color=red>" + liczba1_rze + " - Wyświetlanie teorii o operatorach</font><br>");
+                document.write("<font color=red>" + (liczba3_rze + 20) + " - Czy liczba należy do przedziału (" + liczba1_rze + "; " + liczba2_rze + "]</font><br>");
+                document.write("<font color=red>" + (dzien_rze + 50) + " - Czy liczba należy do przedziału (-∞ ; " + liczba3_rze + ") lub [" + liczba4_rze + " ; +∞)</font><br>");
+                function wczytaj_rze(){
+                    var wczytana_rze = parseFloat(document.getElementById('wartosc').value);
+                    if(wczytana_rze==liczba1_rze){
+                        document.write("<font color=green>Jesteś w opcja "+liczba1_rze+" --> teoria</font><br>");
+                        document.write("<font color=blue>&& ii x=3 y=4 (x < 9 && y > 2) wynik --> prawda<br>|| lub x=3 y=4 (x==8 || y==6) wynik --> fałsz<br>! zaprzeczenie x=3 y=4 !(x==y) wynik --> prawda</font><br>");
+                    }
+                    else if(wczytana_rze==(liczba3_rze+20)){
+                        document.write("<font color=green>Jesteś w opcja "+(liczba3_rze+20)+" --> przedział</font><br>");
+                        var przedzial1_rze = parseFloat(prompt("Podaj liczbę: ",""));
+                        if(przedzial1_rze>liczba1_rze && przedzial1_rze<=liczba2_rze){
+                            document.write("<font color=blue>liczba należy do przedziału</font><br>");
+                        }
+                        else{
+                            document.write("<font color=red>liczba nie należy do przedziału</font><br>");
+                        }
+                    }
+                    else if(wczytana_rze=(dzien_rze+50)){
+                        document.write("<font color=green>Jesteś w opcja "+(dzien_rze+50)+" --> przedział</font><br>");
+                        var przedzial2_rze = parseFloat(prompt("Podaj liczbę: ",""));
+                        if(przedzial2_rze>liczba3_rze || przedzial2_rze<=liczba4_rze){
+                            document.write("<font color=blue>liczba należy do przedziału</font><br>");
+                        }
+                        else{
+                            document.write("<font color=red>liczba nie należy do przedziału</font><br>");
+                        }
+                    }
+                    else{
+                        document.write("<font color=red>nie ma takiej opcji</font><br>");
+                    }
+                }
+            </script>
+        </div>
+        <br>
+        <input type="text" id="wartosc" value="Podaj wartość">
+        <input type="button" value="Wczytaj" onclick="wczytaj_rze()">
+    </body>
+</html>
